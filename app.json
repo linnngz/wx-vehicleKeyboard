@@ -1,7 +1,7 @@
 {
-  "pages": [    
-    "pages/addcar/addcar",
-    "pages/index/index"
+  "pages": [
+    "pages/index/index",
+    "pages/addcar/addcar"
   ],
   "window": {
     "backgroundTextStyle": "light",

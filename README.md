@@ -18,6 +18,7 @@
 2. `useInput`: true/false  默认为true   是否使用组件中的输入框（如果不需要，可以仅仅使用虚拟键盘，获得输入车牌后自行处理后续业务逻辑）
 
 #### 方法：
+在使用组件的页面的js代码中：
 ```
 handletapkey (e) {
   const platenum = e.detail.platenum

@@ -1,0 +1,9 @@
+/**index.wxss**/
+.btn_add_car{
+  width: 85%;
+  text-align: center;
+  background-color: #07c160;
+  color: #fff;
+  border-radius: 8rpx;
+  padding: 16rpx 0;
+}

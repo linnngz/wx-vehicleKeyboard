@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="container">
+  <view bindtap="toAddCar" class="btn_add_car">添加车辆</view>
+</view>

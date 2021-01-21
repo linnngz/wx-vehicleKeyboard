@@ -1,0 +1,4 @@
+/* pages/addcar.wxss */
+.addcar{
+  padding: 40rpx 0;
+}

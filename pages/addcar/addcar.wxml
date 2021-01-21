@@ -1,0 +1,5 @@
+<!--pages/addcar.wxml-->
+<view class="addcar">
+  <v-keyboard bindtapkey="handletapkey" />
+</view>
+

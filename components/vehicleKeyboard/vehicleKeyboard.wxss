@@ -1,0 +1,102 @@
+/* components/vehicleKeyboard/vehicleKeyboard.wxss */
+.v-kb {
+  font-size: 28rpx;
+}
+/* 输入框样式 */
+.v-input{
+  padding: 0 30rpx;
+}
+.v-label{
+  margin-bottom: 20rpx;
+}
+.input_item{
+  width: 70rpx;
+  padding: 0 8rpx;
+  display: inline-block;
+  height: 70rpx;
+}
+.input_val{
+  width: 100%;
+  border: #ddd 2rpx solid;
+  border-radius: 8rpx;
+  display: inline-block;
+  height: 68rpx;
+  line-height: 68rpx;
+  text-align: center;
+  overflow: hidden;
+  font-size: 40rpx;
+}
+.input_val.active{
+  border: #07c160 2rpx solid;
+}
+.input_val_last{
+  border: #ddd 2rpx dashed;
+}
+
+/* 键盘样式 */
+.v-keyboard{  
+  position: absolute;
+  bottom: 0;
+  background-color: #333333aa;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  width: 100%;
+}
+.keyboard{
+  width: 100%;
+  text-align: center;
+}
+.key_wrapper{
+  display: inline-block;
+  color: #333;
+  border-radius: 6rpx;
+  font-size: 26rpx;
+  padding: 10rpx 10rpx;
+  width: 52rpx;
+  text-align: center;
+}
+.key{
+  background-color: #fff;
+  display: inline-block;
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 8rpx;
+  box-shadow: 0 1px 4px #000;
+  font-size: 30rpx;
+  position: relative;
+}
+.key_hide_wrapper{
+  text-align: right;
+  background-color: #666666aa;
+  padding: 10rpx;
+  margin-bottom: 10rpx;
+}
+.key_hide{
+  color: #fff;
+}
+.key_del_wrapper{
+  width: 100rpx;
+  vertical-align: middle;
+}
+.key_del{
+  background-color: #333;
+  color: #fff;
+}
+.key_del_img{
+  display: inline-block;
+  width: 50%;
+  height: 46rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.key.active{
+  background-color: #07c160;
+  color: #fff;
+}
+.key_disabled{
+  opacity: .4;
+  color: #999;
+}

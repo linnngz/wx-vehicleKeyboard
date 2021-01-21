@@ -1,0 +1,66 @@
+<!--components/vehicleKeyboard/vehicleKeyboard.wxml-->
+<view class="v-kb">
+  <!-- 输入框 -->
+  <view class="v-input" wx:if="{{useInput}}">
+    <view class="v-label">{{vlabel}}</view>
+    <view class="input_wrapper">
+      <view class="input_item"><text bindtap="tapinput" data-idx="0" data-val="{{platenum[0]}}" class="input_val {{activeidx===0?'active':''}}">{{platenum[0]}}</text></view>
+      <view class="input_item"><text bindtap="tapinput" data-idx="1" data-val="{{platenum[1]}}" class="input_val {{activeidx===1?'active':''}}">{{platenum[1]}}</text></view>
+      <view class="input_item"><text bindtap="tapinput" data-idx="2" data-val="{{platenum[2]}}" class="input_val {{activeidx===2?'active':''}}">{{platenum[2]}}</text></view>
+      <view class="input_item"><text bindtap="tapinput" data-idx="3" data-val="{{platenum[3]}}" class="input_val {{activeidx===3?'active':''}}">{{platenum[3]}}</text></view>
+      <view class="input_item"><text bindtap="tapinput" data-idx="4" data-val="{{platenum[4]}}" class="input_val {{activeidx===4?'active':''}}">{{platenum[4]}}</text></view>
+      <view class="input_item"><text bindtap="tapinput" data-idx="5" data-val="{{platenum[5]}}" class="input_val {{activeidx===5?'active':''}}">{{platenum[5]}}</text></view>
+      <view class="input_item"><text bindtap="tapinput" data-idx="6" data-val="{{platenum[6]}}" class="input_val {{activeidx===6?'active':''}}">{{platenum[6]}}</text></view>
+      <view class="input_item"><text bindtap="tapinput" data-idx="7" data-val="{{platenum[7]}}" class="input_val {{activeidx===7?'active':''}} input_val_last">{{platenum[7]}}</text></view>
+    </view>
+  </view>
+  
+  <!-- 键盘 -->
+  <view class="v-keyboard" wx:if="{{show}}">
+    <!-- 隐藏键盘 -->
+    <view class="key_hide_wrapper" bindtap="hidekeyboard"><text class="key_hide" bindtap="hidekeyboard">关闭</text></view>
+
+    <!-- 中文键盘 -->
+  <view wx:if="{{type==='zh'}}" class="keyboard">
+    <!-- 普通按键 -->
+    <view>
+      <view class="key_wrapper" wx:for="{{keys[0]}}" wx:key="index"><text bindtap="handletapkey" bindtouchstart="handletouchstart" bindtouchend="handletouchend" data-key="{{item}}" class="key {{item===activekey?'active':''}}">{{item}}</text></view>
+    </view>
+    <view>
+      <view class="key_wrapper" wx:for="{{keys[1]}}" wx:key="index"><text bindtap="handletapkey" bindtouchstart="handletouchstart" bindtouchend="handletouchend" data-key="{{item}}" class="key {{item===activekey?'active':''}}">{{item}}</text></view>
+    </view>
+    <view>
+      <view class="key_wrapper" wx:for="{{keys[2]}}" wx:key="index"><text bindtap="handletapkey" bindtouchstart="handletouchstart" bindtouchend="handletouchend" data-key="{{item}}" class="key {{item===activekey?'active':''}}">{{item}}</text></view>
+    </view>
+    <view>
+      <view class="key_wrapper" wx:for="{{keys[3]}}" wx:key="index"><text bindtap="handletapkey" bindtouchstart="handletouchstart" bindtouchend="handletouchend" data-key="{{item}}" class="key {{item===activekey?'active':''}}">{{item}}</text></view>
+      <!-- 删除键 -->
+      <view class="key_wrapper key_del_wrapper"><view class="key key_del" bindtap="handledel"><image src="/img/ico_backspace.png" class="key_del_img"></image></view></view>
+    </view>
+  </view>
+
+  <!-- 英文键盘 -->
+  <view wx:if="{{type==='en'}}" class="keyboard">
+    <!-- 数字键 -->
+    <view wx:if="{{activeidx<2}}"><!-- 禁用状态 -->
+      <view class="key_wrapper" wx:for="{{keys[4]}}" wx:key="index"><text class="key key_disabled">{{item}}</text></view>
+    </view>
+    <view wx:else>
+      <view class="key_wrapper" wx:for="{{keys[4]}}" wx:key="index"><text bindtap="handletapkey" bindtouchstart="handletouchstart" bindtouchend="handletouchend" data-key="{{item}}" class="key {{item===activekey?'active':''}}">{{item}}</text></view>
+    </view>
+    <!-- 字母键 -->
+    <view>
+      <view class="key_wrapper" wx:for="{{keys[5]}}" wx:key="index"><text bindtap="handletapkey" bindtouchstart="handletouchstart" bindtouchend="handletouchend" data-key="{{item}}" class="key {{item===activekey?'active':''}}">{{item}}</text></view>
+    </view>
+    <view>
+      <view class="key_wrapper" wx:for="{{keys[6]}}" wx:key="index"><text bindtap="handletapkey" bindtouchstart="handletouchstart" bindtouchend="handletouchend" data-key="{{item}}" class="key {{item===activekey?'active':''}}">{{item}}</text></view>
+    </view>
+    <view>      
+      <view class="key_wrapper" wx:for="{{keys[7]}}" wx:key="index"><text bindtap="handletapkey" bindtouchstart="handletouchstart" bindtouchend="handletouchend" data-key="{{item}}" class="key {{item===activekey?'active':''}}">{{item}}</text></view>
+      <!-- 删除键 -->
+      <view class="key_wrapper key_del_wrapper"><view class="key key_del" bindtap="handledel"><image src="/img/ico_backspace.png" class="key_del_img"></image></view></view>
+    </view>
+  </view>
+
+  </view>  
+</view>

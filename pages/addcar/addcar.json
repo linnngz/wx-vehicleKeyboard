@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "v-keyboard": "/components/vehicleKeyboard/vehicleKeyboard"
+  },
+  "navigationBarTitleText": "添加车辆"
+}

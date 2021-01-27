@@ -1,3 +1,5 @@
+######(实际使用时按键样式可能有点问题，自己修改就好辣 :) )
+
 # wx_vehicleKeyboard
 微信小程序 车牌号输入键盘组件(vehicleKeyboard)
 #### 效果图

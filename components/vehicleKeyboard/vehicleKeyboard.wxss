@@ -1,19 +1,34 @@
 /* components/vehicleKeyboard/vehicleKeyboard.wxss */
 .v-kb {
   font-size: 28rpx;
+  position: relative;
+  height: 100vh;
 }
 /* 输入框样式 */
 .v-input{
-  padding: 0 30rpx;
+  /* padding: 0 30rpx; */
+  padding: 0 40rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 .v-label{
   margin-bottom: 20rpx;
 }
+.input_wrapper{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
 .input_item{
-  width: 70rpx;
+  width: 12%;
   padding: 0 8rpx;
   display: inline-block;
   height: 70rpx;
+  max-width: 100rpx;
+  position: relative;
 }
 .input_val{
   width: 100%;
@@ -41,6 +56,7 @@
   padding-top: 10rpx;
   padding-bottom: 10rpx;
   width: 100%;
+  box-shadow: 0 -5px 5px #ccc;
 }
 .keyboard{
   width: 100%;
@@ -52,7 +68,7 @@
   border-radius: 6rpx;
   font-size: 26rpx;
   padding: 10rpx 10rpx;
-  width: 52rpx;
+  width: 54rpx;
   text-align: center;
 }
 .key{
